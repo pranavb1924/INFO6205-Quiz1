@@ -10,7 +10,14 @@ public class BubbleSort {
      */
     public void sort (Comparable[] a){
 //        write your code here.
-
+        int length = a.length;
+        for (int i = 0; i < length - 1; i++){
+            for (int j = i + 1; j < length; j++){
+                if (a[i].compareTo(a[j]) > 0){
+                    this.swap(a, i, j);
+                }
+            }
+        }
     }
     /**
      * Swaps two elements in the given array.
